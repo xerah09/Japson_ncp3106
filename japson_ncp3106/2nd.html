@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a bionote!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Timmana&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/3.png" type="image/x-icon">
+    <title>Ej</title>
+    <style>
+        body {
+            background-color: black; 
+            text-align: center; 
+            margin: 0; 
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column; /* Stack images above text box */
+        }
+
+        .container {
+            position: relative; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px; /* Space between images and text box */
+        }
+
+        .container img.main-img {
+            width: 250px; /* Set width to ensure same size */
+            height: 250px; /* Set height to ensure same size */
+            border: 5px solid #66fcf1; 
+            border-radius: 75px;
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(102, 252, 241, 0.7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+
+        .container img.main-img:hover {
+            transform: scale(1.2); /* Zoom effect on hover */
+            box-shadow: 0 0 30px rgba(102, 252, 241, 0.9); 
+        }
+
+        .floating-box {
+            width: 600px; 
+            padding: 20px;
+            background-color: black;
+            border: 5px solid lightblue;
+            margin: 20px; 
+            box-shadow: 0 0 20px rgba(102, 252, 241, 0.7); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+
+        .floating-box:hover {
+            transform: translateY(-10px); 
+            box-shadow: 0 0 30px rgba(102, 252, 241, 0.9); 
+        }
+
+        p {
+            font-family: "Timmana", sans-serif;
+            color: #66fcf1;
+            font-size: medium;
+            text-align: left; 
+        }
+
+        em {
+            color: black;
+            font-style: italic;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column; /* Stack the images and text box vertically */
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <img class="main-img" src="images/2.png" alt="Profile Image">
+            <img class="main-img" src="images/9.jpg" alt="Another Image"> <!-- Second image -->
+            <img class="main-img" src="images/10.jpg" alt="Third Image"> <!-- Third image -->
+        </div>
+
+        <div class="floating-box">
+            <p>Greetings, I'm John Ernest Japson, a 20-year-old third-year University of the East student studying Computer Engineering.
+            <br>Having gained a strong foundation in both hardware and software, my experience in computer engineering has been both rewarding and challenging.
+            <br>I work with other students on fascinating technical projects and compete in coding competitions as an active member of the Engineering Society in addition to my academic pursuits.
+            <br>I'm particularly interested in artificial intelligence and embedded systems, and I'm excited to help develop smart technologies that will make our lives easier.
+            <br>I'm dedicated to gaining more knowledge and expertise as I pursue my education, and I'm thrilled about the prospects that the rapidly developing field of technology holds.</p>
+        </div>
+    </div>
+</body>
+</html>

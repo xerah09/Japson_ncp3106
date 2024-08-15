@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>EJ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/3.png" type="image/x-icon">
+    <style>
+      body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0b0c10;
+    color: #c5c6c7;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    position: relative;
+    width: 200px;
+    text-align: center;
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+.menu-icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.bars {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: #66fcf1;
+    margin: 6px 0;
+    transition: all 5s ease;
+}
+
+.circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(102, 252, 241, 0.2);
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: scale(0);
+    transition: transform 5s ease, opacity 5s ease;
+    opacity: 0;
+}
+
+@keyframes whirlpool {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.5) rotate(180deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(0) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.menu-checkbox:checked + .menu-icon .circle {
+    animation: whirlpool 5s forwards;
+}
+
+.menu-checkbox:checked + .menu-icon .bars .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: transform 5s ease;
+}
+
+.menu-checkbox:checked + .menu-icon .bars .bar:nth-child(2) {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.menu-checkbox:checked + .menu-icon .bars .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: transform 5s ease;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    opacity: 0; 
+    transition: opacity 5s ease; 
+    height: 0; 
+    overflow: hidden; 
+}
+
+.menu-checkbox:checked ~ .menu {
+    opacity: 1; 
+    height: auto; 
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu a {
+    color: #66fcf1;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    background-color: #1f2833;
+    border-radius: 5px;
+    border: 1px solid #45a29e;
+    transition: all 5s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.menu a:hover {
+    background-color: #45a29e;
+    color: #0b0c10;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.page-transition {
+    opacity: 1;
+    transition: opacity 5s ease;
+}
+
+.page-transition.fade-out {
+    opacity: 0;
+}
+
+    </style>
+</head>
+<body class="page-transition">
+    <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-icon">
+            <div class="circle"></div>
+            <div class="bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </label>
+        <ul class="menu">
+            <li><a href="2nd.html" class="nav-link">ME</a></li>
+            <li><a href="soc.html" class="nav-link">Socials</a></li>
+            <li><a href="Error" class="nav-link">Logout</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const href = link.getAttribute('href');
+                
+                document.body.classList.add('fade-out'); 
+                
+                setTimeout(() => {
+                    window.location.href = href; 
+                }, 500); 
+            });
+        });
+    </script>
+</body>
+</html>

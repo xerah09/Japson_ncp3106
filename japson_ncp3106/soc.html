@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/3.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0b0c10;
+            color: #c5c6c7;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #1f2833;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #66fcf1;
+        }
+
+        header h1 {
+            color: #66fcf1;
+            margin: 0;
+        }
+
+        nav ul.menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul.menu li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul.menu li a {
+            color: #c5c6c7;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul.menu li a:hover {
+            color: #66fcf1;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .hero {
+            background: #1f2833;
+            border: 1px solid #66fcf1;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            color: #66fcf1;
+            margin: 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .social-box {
+            background: #1f2833;
+            border: 1px solid #45a29e;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+        }
+
+        .social-box img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .social-box h3 {
+            color: #66fcf1;
+            margin: 0 0 10px;
+        }
+
+        .social-box a {
+            color: #66fcf1;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-box a:hover {
+            color: #45a29e;
+            transform: scale(1.05); /* Slightly enlarges the link */
+        }
+
+        .social-box:hover {
+            transform: translateY(-10px); /* Lifts the box up */
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Enhanced shadow effect */
+        }
+
+        footer {
+            background: #1f2833;
+            color: #c5c6c7;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+            border-top: 2px solid #66fcf1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Social Media</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Please Click To Direct to My Social Media Account</h2>
+            <p>Please Add Me And Follow Me! Let's Be Mutual.</p>
+        </section>
+
+        <section class="content">
+            <div class="social-box">
+                <a href="https://www.instagram.com/_acatsuri_/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+                    <h3>Instagram</h3>
+                </a>
+            </div>
+            <div class="social-box">
+                <a href="https://www.facebook.com/johnernest.japson.10" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
+                    <h3>Facebook</h3>
+                </a>
+            </div>
+            <div class="social-box">
+                <a href="https://x.com/L0n3lyxerah" target="_blank">
+                    <img src="images/x.png" alt="X Logo">
+                    <h3>X</h3>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 XERAH. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
